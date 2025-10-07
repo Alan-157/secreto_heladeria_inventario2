@@ -1,0 +1,5 @@
+.table thead th { white-space: nowrap; }
+.card-kpi .value { font-size: 1.8rem; font-weight: 700; }
+.card-kpi .label { color: #6c757d; }
+.searchbar { max-width: 360px; }
+.table-responsive { overflow-x: auto; }

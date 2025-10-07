@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Categorías{% endblock %}
+{% block content %}
+<h3 class="mb-3">Categorías</h3>
+
+  {% if categorias %}
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for c in categorias %}
+          <tr>
+            <td>{{ c.nombre }}</td>
+            <td>{{ c.descripcion|default:"-" }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <div class="alert alert-warning text-center" role="alert">
+      No hay categorías registradas.
+    </div>
+  {% endif %}
+{% endblock %}
